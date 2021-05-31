@@ -1,3 +1,10 @@
+/***************************************
+source /etc/profile.d/modules.sh
+module load vim cmake gcc cuda/11.2.146 openmpi nccl cudnn intel
+mpixx openmp_mpi_simd_blocking.cpp -fopenmp -fopt-info-vec-optimized -march=native -O3
+mpirun -np 4 ./a.out
+*****************************************/
+
 #include <mpi.h>
 #include <cstdio>
 #include <cmath>
